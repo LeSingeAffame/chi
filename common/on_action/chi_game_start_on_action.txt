@@ -1,0 +1,32 @@
+﻿# Called from code after history generation
+# Empty scope
+on_game_start = {
+	on_actions = { chi_on_game_start }
+}
+
+chi_on_game_start = {
+	effect = {
+		# To ensure that no one is left behind
+		every_religion_global = {
+			every_faith = {
+				limit = {
+					NOR = {
+						has_doctrine = chi_doctrine_none
+						has_doctrine = chi_doctrine_cultural_identity
+						has_doctrine = chi_doctrine_cultural_identity_exclusive
+						has_doctrine = chi_doctrine_heritage_identity
+						has_doctrine = chi_doctrine_heritage_identity_exclusive
+					}
+				}
+				add_doctrine = chi_doctrine_none
+			}
+		}
+		
+		# Template to use and repeat for each faith that has a cultural/heritage identity doctrine
+		# Ties the culture to the faith
+		# faith:EXEMPLE_FAITH = { set_variable = { name = chi_culture value = culture:CULTURE_EXEMPLE } }
+		
+		# So if we want to tie the Irish Culture to the Insular Faith...
+		# faith:insular_celtic = { set_variable = { name = chi_culture value = culture:irish } }
+	}
+}

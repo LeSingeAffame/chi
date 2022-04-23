@@ -1,0 +1,29 @@
+At game start, the religions and faiths defined in this folder will exist.
+
+== structure ==
+religion_name = {
+	doctrine = chi_doctrine_X
+
+	faiths = {
+		faith_A = {
+			doctrine = chi_doctrine_Y 	# The faith will use this specific doctrine
+		}
+		faith_B = {
+			# If you don't specify which doctrine to use, it will default on the one defined in the religion
+		}
+	}
+}
+
+== exemple ==
+christianity_religion = {
+	doctrine = chi_doctrine_none
+
+	faiths = {
+		insular_celtic = {
+			doctrine = chi_doctrine_cultural_identity 	# The faith will use this specific doctrine
+		}
+	}
+}
+
+Most of the Christian Faiths will get the No Identity doctrine
+Insular however will be set to have the Cultural Identity doctrine - it however cannot know here to which culture it should be tied, which has to be done in the chi_on_game_start on_action
