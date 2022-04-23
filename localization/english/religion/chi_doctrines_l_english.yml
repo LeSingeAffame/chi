@@ -1,0 +1,63 @@
+﻿l_english:
+ chi_doctrine_name:0 "Communal Identity"
+ 
+ chi_doctrine_none_name:0 "No Identity"
+ chi_doctrine_none_desc:0 "The religious customs of our faith are not tied to any culture. All are welcome, as long as their convictions are true."
+ 
+ # Set one
+ chi_doctrine_cultural_identity_name:0 "Cultural Identity"
+ chi_doctrine_cultural_identity_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_culture:0 "#V Conversion Speed#! in [counties|E] of [Faith.MakeScope.Var('chi_culture').Culture.GetName] [culture|E]: #P +50%#!"
+ doctrine_parameter_chi_faster_cultural_conversion_same_faith:0 "#V Promote Culture Speed#! for the [Faith.MakeScope.Var('chi_culture').Culture.GetName] [culture|E] in [counties|E] of this [faith|E]: #P +50%#!"
+ doctrine_parameter_chi_slower_conversion_not_same_culture:0 "#V Conversion Speed#! in [counties|E] of a different [culture|E]: #N -50%#!"
+ doctrine_parameter_chi_lower_conversion_acceptance_not_same_culture:0 "[characters|E] of a different [culture|E] are #N less likely#! to accept converting to this [faith|E]"
+ 
+ chi_doctrine_cultural_identity_exclusive_name:0 "Exclusive Cultural Identity"
+ chi_doctrine_cultural_identity_exclusive_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_culture_exclusive:0 "#V Conversion Speed#! in [counties|E] of [Faith.MakeScope.Var('chi_culture').Culture.GetName] [culture|E]: #P +100%#!"
+ doctrine_parameter_chi_faster_cultural_conversion_same_faith_exclusive:0 "#V Promote Culture Speed#! for the [Faith.MakeScope.Var('chi_culture').Culture.GetName] [culture|E] in [counties|E] of this [faith|E]: #P +100%#!"
+ doctrine_parameter_chi_impossible_conversion_not_same_culture:0 "[counties|E] of a different [culture|E] #N can not be converted to this [faith|E]#!"
+ doctrine_parameter_chi_no_conversion_acceptance_not_same_culture:0 "[characters|E] of a different [culture|E] #N can not be converted to this [faith|E]#!"
+ 
+ chi_doctrine_heritage_identity_name:0 "Heritage Identity"
+ chi_doctrine_heritage_identity_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_heritage:0 "#V Conversion Speed#! in [counties|E] of [Faith.MakeScope.Var('chi_culture').Culture.GetHeritage.GetName] [heritage|E]: #P +25%#!"
+ doctrine_parameter_chi_faster_heritage_conversion_same_faith:0 "#V Promote Culture Speed#! for the [Faith.MakeScope.Var('chi_culture').Culture.GetHeritage.GetName] [heritage|E] in [counties|E] of this [faith|E]: #P +25%#!"
+ doctrine_parameter_chi_slower_conversion_not_same_heritage:0 "#V Conversion Speed#! in [counties|E] of a different [heritage|E]: #N -50%#!"
+ doctrine_parameter_chi_lower_conversion_acceptance_not_same_heritage:0 "[characters|E] of a different [heritage|E] are #N less likely#! to accept converting to this [faith|E]"
+ 
+ chi_doctrine_heritage_identity_exclusive_name:0 "Exclusive Heritage Identity"
+ chi_doctrine_heritage_identity_exclusive_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_heritage_exclusive:0 "#V Conversion Speed#! in [counties|E] of [Faith.MakeScope.Var('chi_culture').Culture.GetHeritage.GetName] [heritage|E]: #P +50%#!"
+ doctrine_parameter_chi_faster_heritage_conversion_same_faith_exclusive:0 "#V Promote Culture Speed#! for the [Faith.MakeScope.Var('chi_culture').Culture.GetHeritage.GetName] [heritage|E] in [counties|E] of this [faith|E]: #P +50%#!"
+ doctrine_parameter_chi_impossible_conversion_not_same_heritage:0 "[counties|E] of a different [heritage|E] #N can not be converted to this [faith|E]#!"
+ doctrine_parameter_chi_no_conversion_acceptance_not_same_heritage:0 "[characters|E] of a different [heritage|E] #N can not be converted to this [faith|E]#!"
+ 
+ # Set two
+ chi_doctrine_cultural_identity_cf_name:0 "Cultural Identity"
+ chi_doctrine_cultural_identity_cf_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_culture_cf:0 "#V Conversion Speed#! in [counties|E] of [GetPlayer.GetCulture.GetName] [culture|E]: #P +50%#!"
+ doctrine_parameter_chi_faster_cultural_conversion_same_faith_cf:0 "#V Promote Culture Speed#! for the [GetPlayer.GetCulture.GetName] [culture|E] in [counties|E] of this [faith|E]: #P +50%#!"
+ doctrine_parameter_chi_slower_conversion_not_same_culture_cf:0 "#V Conversion Speed#! in [counties|E] of a different [culture|E]: #N -50%#!"
+ doctrine_parameter_chi_lower_conversion_acceptance_not_same_culture_cf:0 "[characters|E] of a different [culture|E] are #N less likely#! to accept converting to this [faith|E]"
+ 
+ chi_doctrine_cultural_identity_exclusive_cf_name:0 "Exclusive Cultural Identity"
+ chi_doctrine_cultural_identity_exclusive_cf_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_culture_exclusive_cf:0 "#V Conversion Speed#! in [counties|E] of [GetPlayer.GetCulture.GetName] [culture|E]: #P +100%#!"
+ doctrine_parameter_chi_faster_cultural_conversion_same_faith_exclusive_cf:0 "#V Promote Culture Speed#! for the [GetPlayer.GetCulture.GetName] [culture|E] in [counties|E] of this [faith|E]: #P +100%#!"
+ doctrine_parameter_chi_impossible_conversion_not_same_culture_cf:0 "[counties|E] of a different [culture|E] #N can not be converted to this [faith|E]#!"
+ doctrine_parameter_chi_no_conversion_acceptance_not_same_culture_cf:0 "[characters|E] of a different [culture|E] #N can not be converted to this [faith|E]#!"
+ 
+ chi_doctrine_heritage_identity_cf_name:0 "Heritage Identity"
+ chi_doctrine_heritage_identity_cf_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_heritage_cf:0 "#V Conversion Speed#! in [counties|E] of [GetPlayer.GetCulture.GetHeritage.GetName] [heritage|E]: #P +25%#!"
+ doctrine_parameter_chi_faster_heritage_conversion_same_faith_cf:0 "#V Promote Culture Speed#! for the [GetPlayer.GetCulture.GetHeritage.GetName] [heritage|E] in [counties|E] of this [faith|E]: #P +25%#!"
+ doctrine_parameter_chi_slower_conversion_not_same_heritage_cf:0 "#V Conversion Speed#! in [counties|E] of a different [heritage|E]: #N -50%#!"
+ doctrine_parameter_chi_lower_conversion_acceptance_not_same_heritage_cf:0 "[characters|E] of a different [heritage|E] are #N less likely#! to accept converting to this [faith|E]"
+ 
+ chi_doctrine_heritage_identity_exclusive_cf_name:0 "Exclusive Heritage Identity"
+ chi_doctrine_heritage_identity_exclusive_cf_desc:0 "TO DO DESC"
+ doctrine_parameter_chi_faster_religious_conversion_same_heritage_exclusive_cf:0 "#V Conversion Speed#! in [counties|E] of [GetPlayer.GetCulture.GetHeritage.GetName] [heritage|E]: #P +50%#!"
+ doctrine_parameter_chi_faster_heritage_conversion_same_faith_exclusive_cf:0 "#V Promote Culture Speed#! for the [GetPlayer.GetCulture.GetHeritage.GetName] [heritage|E] in [counties|E] of this [faith|E]: #P +50%#!"
+ doctrine_parameter_chi_impossible_conversion_not_same_heritage_cf:0 "[counties|E] of a different [heritage|E] #N can not be converted to this [faith|E]#!"
+ doctrine_parameter_chi_no_conversion_acceptance_not_same_heritage_cf:0 "[characters|E] of a different [heritage|E] #N can not be converted to this [faith|E]#!"

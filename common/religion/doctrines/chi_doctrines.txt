@@ -1,0 +1,114 @@
+﻿chi_doctrine = {
+	group = "main_group"
+	
+	chi_doctrine_none = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = chi_doctrine_none }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+		}
+	}
+	
+	### Exclusive version of the doctrines make it so provinces and characters that do not share your Heritage or Culture (depending on the type of identity) CANNOT be converted to your faith
+	# As in vanilla, it also increases culture conversion speed if you share the same faith
+	
+	# First set used for already existing faiths...
+	chi_doctrine_cultural_identity = {
+		is_shown = { always = no }
+		parameters = {
+			chi_faster_religious_conversion_same_culture = yes
+			chi_faster_cultural_conversion_same_faith = yes
+			chi_slower_conversion_not_same_culture = yes
+		}
+	}
+	chi_doctrine_cultural_identity_exclusive = {
+		is_shown = { always = no }
+		parameters = {
+			chi_faster_religious_conversion_same_culture_exclusive = yes
+			chi_faster_cultural_conversion_same_faith_exclusive = yes
+			chi_impossible_conversion_not_same_culture = yes
+		}
+	}
+	chi_doctrine_heritage_identity = {
+		is_shown = { always = no }
+		parameters = {
+			chi_faster_religious_conversion_same_heritage = yes
+			chi_faster_heritage_conversion_same_faith = yes
+			chi_slower_conversion_not_same_heritage = yes
+		}
+	}
+	chi_doctrine_heritage_identity_exclusive = {
+		is_shown = { always = no }
+		parameters = {
+			chi_faster_religious_conversion_same_heritage_exclusive = yes
+			chi_faster_heritage_conversion_same_faith_exclusive = yes
+			chi_impossible_conversion_not_same_heritage = yes
+		}
+	}
+	
+	# ... Second set used when creating the faith
+	chi_doctrine_cultural_identity_cf = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = chi_doctrine_cultural_identity }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			chi_faster_religious_conversion_same_culture_cf = yes
+			chi_faster_cultural_conversion_same_faith_cf = yes
+			chi_slower_conversion_not_same_culture_cf = yes
+			chi_lower_conversion_acceptance_not_same_culture_cf = yes
+		}
+	}
+	chi_doctrine_cultural_identity_exclusive_cf = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = chi_doctrine_cultural_identity_exclusive }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			chi_faster_religious_conversion_same_culture_exclusive_cf = yes
+			chi_faster_cultural_conversion_same_faith_exclusive_cf = yes
+			chi_impossible_conversion_not_same_culture_cf = yes
+			chi_no_conversion_acceptance_not_same_culture_cf = yes
+		}
+	}
+	chi_doctrine_heritage_identity_cf = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = chi_doctrine_heritage_identity }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			chi_faster_religious_conversion_same_heritage_cf = yes
+			chi_faster_heritage_conversion_same_faith_cf = yes
+			chi_slower_conversion_not_same_heritage_cf = yes
+			chi_lower_conversion_acceptance_not_same_heritage_cf = yes
+		}
+	}
+	chi_doctrine_heritage_identity_exclusive_cf = {
+		piety_cost = {
+			value = faith_doctrine_cost_mid
+			if = {
+				limit = { has_doctrine = chi_doctrine_heritage_identity_exclusive }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		parameters = {
+			chi_faster_religious_conversion_same_heritage_exclusive_cf = yes
+			chi_faster_heritage_conversion_same_faith_exclusive_cf = yes
+			chi_impossible_conversion_not_same_heritage_cf = yes
+			chi_no_conversion_acceptance_not_same_heritage_cf = yes
+		}
+	}
+}
