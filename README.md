@@ -23,3 +23,13 @@
  To do that, you can refer to common/religion/religions/\_chi\_religions.info and common/on_action/chi\_game\_start\_on\_action.txt
  
  The general idea is to specific in the religion files which culture your faiths need to use, and to link the culture and the faith when the game starts.
+
+## Other notes
+The Culture and Heritage Identity Doctrine is put in the main doctrine group, which can only have 5 doctrines before the interface becomes messy. If you already add doctrines in this main group, you might have to put the Culture and Heritage Identity doctrine in a new group, and edit the GUI accordingly.
+
+## Edited vanilla files
+Every edited file is marked with a **CHI EDIT: [SUMMARY OF THE CHANGES]** at the top of the file, and another **CHI EDIT: [CHANGES]** right above the edited portion.
+
+The following vanilla files have been edited:
+ - common/council_tasks/00_court_chaplain_tasks
+ - common/script_values/99_court_chaplain_values

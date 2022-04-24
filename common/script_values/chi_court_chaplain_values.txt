@@ -1,0 +1,202 @@
+﻿#######################
+# Conversion
+#######################
+
+chi_court_chaplain_conversion_chi_doctrine_impact = {
+	### Bonuses
+	# Right culture
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_culture }
+			scope:county.culture = scope:councillor.liege.faith.var:chi_culture
+		}
+		add = {
+			value = scope:councillor.conversion_cultural_identity_bonus
+			desc = COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_BONUS_MODIFIER
+		}
+	}
+	# Right exclusive culture
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_culture_exclusive }
+			scope:county.culture = scope:councillor.liege.faith.var:chi_culture
+		}
+		add = {
+			value = scope:councillor.conversion_cultural_identity_exclusive_bonus
+			desc = COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_EXCLUSIVE_BONUS_MODIFIER
+		}
+	}
+	# Right heritage
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_heritage }
+			scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture }
+		}
+		add = {
+			value = scope:councillor.conversion_heritage_identity_bonus
+			desc = COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_BONUS_MODIFIER
+		}
+	}
+	# Right exclusive heritage
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_heritage_exclusive }
+			scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture }
+		}
+		add = {
+			value = scope:councillor.conversion_heritage_identity_exclusive_bonus
+			desc = COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_EXCLUSIVE_BONUS_MODIFIER
+		}
+	}
+	
+	### Maluses
+	## Note: The wrong exclusive version flat out disable conversion, it's still put there (but commented out) in case it needs to be changed
+	# Wrong culture
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_slower_conversion_not_same_culture }
+			NOT = { scope:county.culture = scope:councillor.liege.faith.var:chi_culture }
+		}
+		add = {
+			value = scope:councillor.conversion_cultural_identity_resistance
+			desc = COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_PENALTY_MODIFIER
+		}
+	}
+	# # Wrong exclusive culture
+	# if = {
+		# limit = {
+			# exists = scope:county
+			# scope:councillor.liege.faith = { has_doctrine_parameter = chi_impossible_conversion_not_same_culture }
+			# NOT = { scope:county.culture = scope:councillor.liege.faith.var:chi_culture }
+		# }
+		# add = {
+			# value = scope:councillor.conversion_cultural_identity_exclusive_resistance
+			# desc = COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_EXCLUSIVE_PENALTY_MODIFIER
+		# }
+	# }
+	# Wrong heritage
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_slower_conversion_not_same_heritage }
+			NOT = { scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture } }
+		}
+		add = {
+			value = scope:councillor.conversion_heritage_identity_resistance
+			desc = COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_PENALTY_MODIFIER
+		}
+	}
+	# # Wrong exclusive heritage
+	# if = {
+		# limit = {
+			# exists = scope:county
+			# scope:councillor.liege.faith = { has_doctrine_parameter = chi_impossible_conversion_not_same_heritage }
+			# NOT = { scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture } }
+		# }
+		# add = {
+			# value = scope:councillor.conversion_heritage_identity_exclusive_resistance
+			# desc = COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_EXCLUSIVE_PENALTY_MODIFIER
+		# }
+	# }
+}
+
+conversion_cultural_identity_bonus = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_culture }
+			scope:county.culture = scope:councillor.liege.faith.var:chi_culture
+		}
+		add = court_chaplain_conversion_base_total
+		multiply = 0.5
+	}
+}
+conversion_cultural_identity_exclusive_bonus = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_culture_exclusive }
+			scope:county.culture = scope:councillor.liege.faith.var:chi_culture
+		}
+		add = court_chaplain_conversion_base_total
+		multiply = 1
+	}
+}
+conversion_heritage_identity_bonus = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_heritage }
+			scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture }
+		}
+		add = court_chaplain_conversion_base_total
+		multiply = 0.25
+	}
+}
+conversion_heritage_identity_exclusive_bonus = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_faster_religious_conversion_same_heritage_exclusive }
+			scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture }
+		}
+		add = court_chaplain_conversion_base_total
+		multiply = 0.5
+	}
+}
+
+conversion_cultural_identity_resistance = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_slower_conversion_not_same_culture }
+			NOT = { scope:county.culture = scope:councillor.liege.faith.var:chi_culture }
+		}
+		subtract = court_chaplain_conversion_base_total
+		multiply = 0.5
+	}
+}
+# conversion_cultural_identity_exclusive_resistance = {
+	# value = 0
+	# if = {
+		# limit = {
+			# exists = scope:county
+			# scope:councillor.liege.faith = { has_doctrine_parameter = chi_impossible_conversion_not_same_culture }
+			# NOT = { scope:county.culture = scope:councillor.liege.faith.var:chi_culture }
+		# }
+		# subtract = court_chaplain_conversion_base_total
+	# }
+# }
+conversion_heritage_identity_resistance = {
+	value = 0
+	if = {
+		limit = {
+			exists = scope:county
+			scope:councillor.liege.faith = { has_doctrine_parameter = chi_slower_conversion_not_same_heritage }
+			NOT = { scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture } }
+		}
+		subtract = court_chaplain_conversion_base_total
+		multiply = 0.5
+	}
+}
+# conversion_heritage_identity_exclusive_resistance = {
+	# value = 0
+	# if = {
+		# limit = {
+			# exists = scope:county
+			# scope:councillor.liege.faith = { has_doctrine_parameter = chi_impossible_conversion_not_same_heritage }
+			# NOT = { scope:county.culture = { has_same_culture_heritage = scope:councillor.liege.faith.var:chi_culture } }
+		# }
+		# subtract = court_chaplain_conversion_base_total
+	# }
+# }

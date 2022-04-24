@@ -1,0 +1,10 @@
+﻿l_english:
+ COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_BONUS_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_cultural_identity').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_EXCLUSIVE_BONUS_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_cultural_identity_exclusive').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_BONUS_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_heritage_identity').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_EXCLUSIVE_BONUS_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_heritage_identity_exclusive').GetBaseName]"
+ 
+ COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_PENALTY_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_cultural_identity').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_CULTURAL_IDENTITY_EXCLUSIVE_PENALTY_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_cultural_identity_exclusive').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_PENALTY_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_heritage_identity').GetBaseName]"
+ COURT_CHAPLAIN_CONVERSION_HERITAGE_IDENTITY_EXCLUSIVE_PENALTY_MODIFIER:0 "[councillor.GetFaith.GetName] — [GetFaithDoctrine('chi_doctrine_heritage_identity_exclusive').GetBaseName]"
